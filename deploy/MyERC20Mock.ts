@@ -16,8 +16,8 @@ const deploy: DeployFunction = async (hre) => {
     console.log(`Deployer: ${deployer}`)
 
     // Token configuration
-    const tokenName = 'My ERC20 Mock'
-    const tokenSymbol = 'MERC20'
+    const tokenName = 'Sidekick'
+    const tokenSymbol = 'K'
     const initialMintAmount = hre.ethers.utils.parseEther('10') // 10 tokens
 
     const { address } = await deploy(contractName, {

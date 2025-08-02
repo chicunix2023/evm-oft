@@ -55,17 +55,17 @@ const config: HardhatUserConfig = {
         ],
     },
     networks: {
-        'optimism-testnet': {
-            eid: EndpointId.OPTSEP_V2_TESTNET,
-            url: process.env.RPC_URL_OP_SEPOLIA || 'https://optimism-sepolia.gateway.tenderly.co',
+        mainnet: {
+            eid: EndpointId.ETHEREUM_V2_MAINNET,
+            url: process.env.RPC_URL_ETHEREUM || '',
             accounts,
             oftAdapter: {
-                tokenAddress: '0x0', // Set the token address for the OFT adapter
+                tokenAddress: process.env.TOKEN_ADDRESS_MAINNET || '', // Set the token address for the OFT adapter
             },
         },
-        'arbitrum-testnet': {
-            eid: EndpointId.ARBSEP_V2_TESTNET,
-            url: process.env.RPC_URL_ARB_SEPOLIA || 'https://arbitrum-sepolia.gateway.tenderly.co',
+        bsc: {
+            eid: EndpointId.BSC_V2_MAINNET,
+            url: process.env.RPC_URL_BSC || '',
             accounts,
         },
         hardhat: {
