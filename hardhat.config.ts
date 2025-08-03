@@ -55,12 +55,12 @@ const config: HardhatUserConfig = {
         ],
     },
     networks: {
-        mainnet: {
+        ethereum: {
             eid: EndpointId.ETHEREUM_V2_MAINNET,
             url: process.env.RPC_URL_ETHEREUM || '',
             accounts,
             oftAdapter: {
-                tokenAddress: process.env.TOKEN_ADDRESS_MAINNET || '', // Set the token address for the OFT adapter
+                tokenAddress: process.env.TOKEN_ADDRESS_ETHEREUM || '', // Set the token address for the OFT adapter
             },
         },
         bsc: {
